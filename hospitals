@@ -1,0 +1,13 @@
+Hospitals
+
+This is a (curated) list of available hospital data
+
+HCRIS Hospital Cost Reports - data gold mine. A visual representation of this file would be incredibly helpful. The 50K foot view is illustrated in figure 1 here. But one more layer of detail would help us did through the data. There is a break down of bad debt/indigent care/uninsured that could help us start to better understand cost-shifting (esp pre-post ACA)
+Provider Specific File - has payment adjusters (that account for higher costs). Appendix A in this manual explains the variables. There is a read-me file as well. There is a variable called cost to charge ratio. Is this same as other cost to charge ratios?
+Provider of Services File - hospital characteristics like beds, staffing
+Hospital Service Area File - anything unique helpful?
+Hospital Compare - quality metrics for about 4,000 hospitals
+Provider Charge File - top 100 DRGs for 3,300 hospitals. A cost to charge ratio can be calculated. Is this the same as other cost to charge ratios.
+NPPES - this file has identifiers, 
+Healthcare Cost Utilization Project - all three segments (IP, OP, ED). This includes both private and public payers claims. There is a variable called cost to charge ratio. Is this same as other cost to charge ratios?
+DRGs describe relative costs of specific procedures/diagnoses. 
