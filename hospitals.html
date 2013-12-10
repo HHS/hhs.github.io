@@ -1,20 +1,5 @@
 <!doctype html>
 
-{
-  "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
-    "dcterms": "http://purl.org/dc/terms/", 
-    "dcat": "http://www.w3.org/ns/dcat#", 
-    "foaf": "http://xmlns.com/foaf/0.1/", 
-    "pod": "http://project-open-data.github.io/schema/2013-09-20_1.0#"
-  }, 
-  "@id": "http://hub.healthdata.gov", 
-  "@type": "dcat:Catalog", 
-  "dcterms:title": "HealthData.gov Catalog Hub", 
-  "rdfs:label": "HealthData.gov Catalog Hub", 
-  "foaf:homepage": "http://hub.healthdata.gov", 
-  "dcat:dataset": [
-
 <html>
   <head>
     <meta charset="utf-8">
@@ -32,6 +17,7 @@
     <div class="wrapper">
       <header>
           <h1>HHS on GitHub</h1>
+          
         <p>
           <a href="hhs.github.io/index.html">home</a>
         </p>
@@ -42,7 +28,9 @@
 
       <section>
         <h3>
-          HHS Datasets about Hospitals
+          HHS Datasets about 
+            <link itemprop="url" href="http://en.wikipedia.org/wiki/Hospital" />
+          Hospitals
         </h3>
         <p>
           This is a list of HHS Datasets that contain information about hospitals.<em>(<a href="https://github.com/HHS/hhs.github.io/issues">Help improve this content</a> by suggesting more datasets.)</em>
@@ -69,17 +57,20 @@
             </tr>
             <tr>
               <td>Hospital payment adjusters</td>
-              <td>Medicare establishes standard payments, then adjusts payments to hospitals depending on specific characteristics of each hospital. Examples of characteristics captured by this dataset include: cost of living (COLA), disproportionate share (DSH), sole community hospitals (SCH), small rural Medicare-dependent hospitals (MDHs). Learn more in the manual that describes payment processing <a href="http://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/Downloads/clm104c03.pdf">Manual</td>
+              <td>Medicare establishes standard payments, then adjusts payments to hospitals depending on specific characteristics of each hospital. Examples of characteristics captured by this dataset include: cost of living (COLA), 
+<link itemprop="url" href="http://en.wikipedia.org/wiki/Disproportionate_share_hospital" >
+disproportionate share (DSH), sole community hospitals (SCH), small rural Medicare-dependent hospitals (MDHs). Learn more in the manual that describes payment processing <a href="http://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/Downloads/clm104c03.pdf">here </td>
               <td><a href="http://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/psf_text.html">Provider specific file</td>
             </tr>
             <tr>
               <td>Hospital characteristics</td>
               <td>Name, address, phone number, beds, staffing, ownership type, accreditation/certification, residency programs, medical school affiliation, Medicare/Medicaid participating provider. Service availability, direct/contracted service: laboratories, pharmacies, every department. Federally qualified health center (FQHC) indicator, CMS certification number, urban/rural indicator</td>
-              <td><a href="https://data.cms.gov/browse?tags=pos">Provider of Services File Other</a></td>
+              <td><a href="https://data.cms.gov/browse?tags=pos">Provider of Services File OTHER</a></td>
             </tr>
             <tr>
+http://en.wikipedia.org/wiki/Category:Health_care
               <td>Hospital quality</td>
-              <td>Quality data for over 4,000 US hospitals. As of Dec 2013 includes satisfaction, readmissions, complications, death, timely and effective care, use of medical imaging.</td>
+              <td>Quality data for over 4,000 US hospitals. Indicators include satisfaction, readmissions, complications, death, timely and effective care, use of medical imaging.</td>
               <td><a href="https://data.medicare.gov/data/hospital-compare"></a>Hospital Compare, <a href="https://data.medicare.gov/developers">API, </a><a href="http://www.healthdata.gov/cqld">Linked data</a></td>
             </tr>
             <tr>
@@ -144,9 +135,7 @@
             <tr><td>34</td><td>Hospital Quality Indicator</td><td>Enter code to indicate that hospital meets criteria to receive higher payment per MMA quality standards. Blank = hospital does not meet criteria 1 = hospital quality standards have been met</td><td>139</td><td>X(1)</td></tr>
             <tr><td>35</td><td>Actual Geographic Location Core - Based Statistical Area (CBSA)</td><td>Enter the appropriate code for the CBSA00001-89999, or the rural area, (blank(blank) (blank) 2 digit numeric State code such as _ _ _ 36 for Ohio, where the facility is physically located.</td><td>140-144</td><td>X(5)</td></tr>
             <tr><td>36</td><td>Wage Index Location CBSA</td><td>Enter the appropriate code for the CBSA, 00001-89999, or the rural area, (blank)(blank) (blank) (2 digit numeric State code) such as _ _ _ 3 6 for Ohio, to which a hospital has been reclassified due to its prevailing wage rates. Leave blank or enter the actual location CBSA (field35), if not reclassified. Pricer will automatically default to the actual location CBSA if this field is left blank.</td><td>145-149</td><td>X(5)</td></tr>
-            <tr><td>37</td><td>Standardized Amount Location CBSA</td><td>Enter the appropriate code for the CBSA, 00001-89999 or the rural area, (blank)(blank)(blank) (2 digit numeric State code)</td><td>150-154</td><td>X(5)</td></tr>
-            <tr><td>38</td><td>Special Wage Index</td><td>Enter the special wage index that certain providers may be assigned. Enter zeroes unless the Special Payment Indicator field equals a “1” or “2.”</td><td>155-160</td><td>9(2)V9(4)</td></tr>
-            <tr><td>39</td><td>Pass Through Amount for Capital</td><td>Per diem amount based on the interim payments to the hospital. Must be zero if location 185 = A, B, or C (See the Provider Reimbursement Manual, §2405.2). Used for PPS hospitals prior to their cost reporting period beginning in FY 92, new hospitals during their first 2 years of operation FY 92 or later, and non-PPS hospitals or units. Zero-fill if this does not apply.</td><td>161-166</td><td>9(4)V9(2)</td></tr>
+   9</td><td>Pass Through Amount for Capital</td><td>Per diem amount based on the interim payments to the hospital. Must be zero if location 185 = A, B, or C (See the Provider Reimbursement Manual, §2405.2). Used for PPS hospitals prior to their cost reporting period beginning in FY 92, new hospitals during their first 2 years of operation FY 92 or later, and non-PPS hospitals or units. Zero-fill if this does not apply.</td><td>161-166</td><td>9(4)V9(2)</td></tr>
             <tr><td>40</td><td>Pass Through Amount for Direct Medical Education</td><td>Per diem amount based on the interim payments to the hospital (See the Provider, Reimbursement Manual, §2405.2.). Zero fill if this does not apply.</td><td>167-172</td><td>9(4)V9(2)</td></tr>
             <tr><td>41</td><td>Pass Through Amount for Organ Acquisition</td><td>Per diem amount based on the interim payments to the hospital. Include standard acquisition amounts for kidney, heart, lung, pancreas, intestine and liver transplants. Do not include acquisition costs for bone marrow transplants. (See the Provider Reimbursement Manual, §2405.2.) Zero fill if this does not apply.</td><td>173-178</td><td>9(4)V9(2)</td></tr>
             <tr><td>42</td><td>Total Pass Through Amount, Including Miscellaneous</td><td>Per diem amount based on the interim payments to the hospital (See the Provider Reimbursement Manual §2405.2.) Must beat least equal to the three pass through amounts listed above. The following are included in total pass through amount in addition to the above pass through amounts. Certified Registered Nurse Anesthetists (CRNAs) are paid as part of Miscellaneous Pass Through for rural hospitals that perform fewer than 500 surgeries per year, and Nursing and Allied Health Professional Education when conducted by a provider in an approved program. Do not include amounts paid for Indirect Medical Education, Hemophilia Clotting Factors, or DSH adjustments. Zero-fill if this does not apply.</td><td>179-184</td><td>9(4)V9(2)</td></tr>
@@ -158,7 +147,9 @@
             <tr><td>48</td><td>New Hospital</td><td>Enter "Y" for the first 2 years that a new hospital is in operation. Leave blank if hospital is not within first 2 years of operation.</td><td>207</td><td>X(1)</td></tr>
             <tr><td>49</td><td>Capital Indirect Medical Education Ratio</td><td>This is for IPPS hospitals and IRFs only. Enter the ratio of residents/interns to the hospital's average daily census. Calculate by dividing the hospital's full-time equivalent total of residents during the fiscal year by the hospital's total inpatient days. (See §20.4.1 for inpatient acute hospital and §§140.2.4.3 and 140.2.4.5.1for IRFs.) Zero-fill for a non-teaching hospital.</td><td>208-212</td><td>9V9(4)</td></tr>
             <tr><td>50</td><td>Capital Exception Payment Rate</td><td>The per discharge exception payment to which a hospital is entitled. (See §20.4.7above.)</td><td>213-218</td><td>9(4)V9(2)</td></tr>
-            <tr><td>51</td><td>Filler</td><td>Blank</td><td>219-240</td><td>X(22)</td></tr>
+            <tr><td>51         <tr><td>37</td><td>Standardized Amount Location CBSA</td><td>Enter the appropriate code for the CBSA, 00001-89999 or the rural area, (blank)(blank)(blank) (2 digit numeric State code)</td><td>150-154</td><td>X(5)</td></tr>
+            <tr><td>38</td><td>Special Wage Index</td><td>Enter the special wage index that certain providers may be assigned. Enter zeroes unless the Special Payment Indicator field equals a “1” or “2.”</td><td>155-160</td><td>9(2)V9(4)</td></tr>
+            <tr><td>3</td><td>Filler</td><td>Blank</td><td>219-240</td><td>X(22)</td></tr>
           </tbody>  
         </table>
       </section>
