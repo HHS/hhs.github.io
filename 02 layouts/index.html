@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+{% include head.html %}
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+	<div class="container">
+		{% include title.html %}
+
+		{% include nav.html %}
+
+		<div class="thirteen columns documentation">
+
+		<h1 id='getting_started_with_blue_button'>Getting Started with Blue Button+</h1>
+
+		<p>Blue Button is the symbol for a patient&#8217;s access to their own data. Blue Button+ is the ability to get records in a human-readable and machine-readable format; and to send them where they choose. This enables a consumer to do everything from printing a physical copy to sharing it with a third party application.</p>
+
+
+		</div>
+
+		<div class="row pointers">
+			<div class="sixish columns pointer">
+				<div class="point">
+				<h3>For Data Holders / Providers</h3>
+				<p>Learn how to structure a patient health record and how to transmit it to a patient’s location of choosing. Meet <a href="mu2.html">MU 2 -  VDT requirement</a>.</p>
+
+
+				<div class="quick-link">
+					<p><a href="healthrecords.html"><span class="num">1</span> Structure health data as C-CDA</a></p>
+				</div>
+
+
+				<div class="quick-link">
+					<p><a href="transmit-using-direct.html"><span class="num">2</span> Transmit health data using Direct</a></p>
+				</div>
+
+				<div class="quick-link">
+					<p><a href="transmit-using-direct.html#triggers"><span class="num">3</span> Implement automation/triggers</a></p>
+				</div>
+
+
+				<div class="quick-link">
+					<p><a href="transmit-using-direct.html#bundle"><span class="num">4</span> Retrieve BB+ Patient Trust Bundle</a></p>
+				</div>
+
+				</div>
+
+			</div>
+
+			<div class="sixish columns pointer">
+				<div class="point">
+				<h3>For Third Party Applications</h3>
+				<p>Learn how to build applications powered by Blue Button+ receiving structured patient health records and getting automated access from dataholders.</p>
+
+				<div class="quick-link">
+					<p><a href="healthrecords.html"><span class="num">1</span> Parse health data as C-CDA</a></p>
+				</div>
+
+
+				<div class="quick-link">
+					<p><a href="receive-using-direct.html"><span class="num">2</span> Receive health data using Direct</a></p>
+				</div>
+
+
+				<div class="quick-link">
+					<p><a href="receive-using-direct.html#bundle"><span class="num">3</span> Submit your anchor to trust bundle</a></p>
+				</div>
+
+				<div class="quick-link">
+					<p><a href="receive-using-direct.html"><span class="num">4</span> Retrieve BB+ Provider Trust Bundle</a></p>
+				</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+			<div class="thirteen columns offset-by-three">
+				<p>This Blue Button+ guidance was developed though <a href="http://www.healthit.gov/newsroom/about-onc">ONC’s</a> <a href="http://wiki.siframework.org/Automate+Blue+Button+Initiative">Standards and Interoperability Framework</a> initiative with input from more than 70 organizations. These docs are hosted on <a href="https://github.com/blue-button/docs">GitHub</a>, if you have any suggestions create a <a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
+			</div>
+
+	</div><!-- container -->
+
+
+	{% include getsat.html %}
+
+	<!-- End Document
+	================================================== -->
+</body>
+</html>
