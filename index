@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>hhs.github.io by HHS</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>hhs.github.io</h1>
+        <p>HHS on GitHub</p>
+
+        <p class="view"><a href="https://github.com/HHS">view HHS GitHub Profile</a></p>
+
+    <script>
+      (function() {
+        var cx = '015222162400019825422:stwzze1v0aw';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+
+      </header>
+      <section>
+        <h3>
+          <a name="home" class="anchor" href="#home"><span class="octicon octicon-link"></span></a>Welcome to HHS on GitHub.
+        </h3>
+        <p>
+          This U.S. Department of Health and Human Services (HHS) GitHub page is a launch page to a collection of code, tools, and case studies to help individuals use open HHS data.
+        </p>
+        <pre>
+          <p>
+            Disclaimer
+          </p>
+        </pre>
+        <h3>
+          <a name="hospitals" class="anchor" href="#hospitals"><span class="octicon octicon-link"></span></a>Hospitals</h3>
+        <p>
+          Check out datasets about hospitals.
+        </p>
+      </section>
+      <footer>
+        <p><small>hosted on GitHub pages &mdash; theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
