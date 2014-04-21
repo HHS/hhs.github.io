@@ -1,0 +1,11 @@
+var hhs_groups = [
+  {
+    "name”:”NCIP”,
+    "description”:”Repos for National Cancer Informatics Program (NCIP) Open Source at the National Cancer Institute”,
+    "category”:”Category 1”
+  },
+  {
+    "name":"Additional repositories",
+    "description":"Repositories that are not categorized into the existing groups"
+  },
+];

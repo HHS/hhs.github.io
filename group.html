@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>HHS on Github</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Loading list of repos and groups from JSON files -->
+    <script type="text/javascript" src=“hhs-group.json"></script>
+    <script type="text/javascript" src=“hhs-repo.json"></script>
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript" src="assets/hhsnamespace.js"></script>
+
+    <script>
+      var browserIsIELessThan10 = false;
+      if ($.browser.msie && parseInt($.browser.version, 10) < 10){
+        browserIsIELessThan10 = true;
+        }
+    </script>
+
+    <script type="text/javascript">
+    (function ($, undefined) {
+
+      var HHSGlobal = window.HHSGlobal;
+
+      HHSGlobal.namespace('cache.repos');
+      HHSGlobal.namespace('cache.reposDate');
+      HHSGlobal.namespace('cache.members');
+      HHSGlobal.namespace('cache.membersDate');
+
+      var repoGroupName = HHSGlobal.urlQueryString('name');
+
+      repoGroupName = unescape(repoGroupName);
+
+      function processMembers(members) {
+          $(function () {
+            if (members) {
+              $("#num-members").text(members.length);
+              }
+          });
+        }
+
+      function addRepo(repo) {
+        if (repo) {
+          var $item = $("<li>").addClass("repo grid-1 " + repo.category);
+          var $link = $("<a>").attr("href", repo.html_url).appendTo($item);
+          $link.append($("<h2>").text(repo.name));
+          $link.append($("<p>").text(repo.description));
+          $item.appendTo("#repos");
+          }
+        }
+
+      function selectReposFromGroup(reposFromGithub,repoGroupName) {
+
+        var reposInGroup = [];
+
+        var repoGroups = hhs_groups;
+
+        var repoGroup = repoGroups[repoGroupName];
+
+        $(function () {
+          $.each(repoGroups, function (i, group) {
+            if( group ) {
+              if( group.name ) {
+                if( group.name === repoGroupName ) {
+                  repoGroup = group;
+                  }
+                }
+              }
+            });
+        });
+
+
+        $(function () {
+
+          $.each(reposFromGithub, function (i, repo) {
+
+            var matchedToGroup = false;
+
+            $.each(hhs_repos, function (i, hhs_repo) {
+
+              if( hhs_repo ) {
+                if( hhs_repo.full_name ) {
+                  if( repo.full_name === hhs_repo.full_name ) {
+                    if( hhs_repo.group === repoGroupName ) {
+                      matchedToGroup = true;
+                      }
+                    }
+                  }
+                }
+
+            });
+
+            if( matchedToGroup ) {
+              if( !repo.category ) {
+                repo['category'] = repoGroup.category;
+              }
+              reposInGroup.push(repo);
+              }
+          });
+
+        });
+
+        return reposInGroup;
+      }
+
+      function addReposFromGroup(listOfRepos) {
+        $(function () {
+          $.each(listOfRepos, function (i, repo) {
+              addRepo(repo);
+              });
+          });
+      }
+
+      function processRepositoriesInGroup(repos)  {
+
+        $(function () {
+            $("#num-repos").text(repos.length);
+
+            // Convert pushed_at to Date.
+            $.each(repos, function (i, repo) {
+              if (!browserIsIELessThan10) {
+                repo.pushed_at = new Date(repo.pushed_at);
+                }
+            });
+
+          });
+
+          // Sort alphabetically by repository name
+          repos.sort(function (a, b) {
+            var namea = a.full_name.toLowerCase();
+            var nameb = b.full_name.toLowerCase();
+            if (namea > nameb) return 1;
+            if (nameb > namea) return -1;
+            return 0;
+          });
+
+          //
+          // Process the repositories
+          //
+          var reposInGroup = selectReposFromGroup(repos,repoGroupName);
+
+          HHSGlobal.addRecentlyUpdatedRepos(reposInGroup);
+
+          addReposFromGroup(reposInGroup);
+        }
+
+
+      HHSGlobal.processReposCallback = processRepositoriesInGroup;
+      HHSGlobal.processMembersCallback = processMembers;
+
+      HHSGlobal.initializeCache();
+      HHSGlobal.findAllOrgsFromReposCatalog(hhs_repos);
+
+      if ( browserIsIELessThan10 ) {
+        HHSGlobal.getReposFromOneOrg   = HHSGlobal.getReposFromOneOrgWithoutCORS;
+        HHSGlobal.getMembersFromOneOrg = HHSGlobal.getMembersFromOneOrgWithoutCORS;
+        }
+
+      HHSGlobal.getReposFromAllOrgs();
+      HHSGlobal.getMembersFromAllOrgs();
+
+    })(jQuery);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>HHS on Github</h1></div>
+        <a href="http://hhs.github.io/">
+          <img src="images/logo.png" alt=“HHS Logo" height="200" width="200">
+        </a>
+        <h2>HHS</h2>
+        <h2>on</h2>
+        <h2>GitHub</h2>
+        <p>Visit <a href="http://www.github.com/HHS/hhs.github.com">github.com/HHS</a></p>
+        <p><a href="https://github.com/HHS/hhs.github.com/wiki/_pages">Wiki Pages</a></p>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/HHS/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
+
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/hhs/repositories"><span id="num-repos"><img src="images/spinner.gif" /></span> public repos</a>
+            <br>
+            <a href="https://github.com/hhs?tab=members"><span id="num-members"><img src="images/spinner.gif" /></span> members</a>
+          </p>
+          <p class="email"><a href="mailto:___@hhs.gov">Future Email</a></p>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div id="category" class="grid-1 iota iotaleft categoryheader category1”>
+          <h4>Category 1</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotacenter categoryheader category2">
+          <h4>Category 2</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotaright categoryheader category3”>
+          <h4>Category 3</h4>
+        </div>
+      </div>
+
+      <ol id="repos"></ol>
+    </div>
+  </body>
+</html>

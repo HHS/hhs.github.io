@@ -1,104 +1,124 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
 
-{% include head.html %}
+<html>
+  <head>
+    <title>HHS GitHub</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-</head>
-<body>
+    <!-- Loading list of repos and groups from JSON files -->
+    <script type="text/javascript" src=“hhs-group.json"></script>
+    <script type="text/javascript" src="hhs-repo.json"></script>
+    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="assets/strftime.js"></script>
+    <script type="text/javascript" src="assets/hhsnamespace.js"></script>
 
+    <script>
+      var browserIsIELessThan10 = false;
+      if ($.browser.msie && parseInt($.browser.version, 10) < 10){
+        browserIsIELessThan10 = true;
+        }
+    </script>
 
+    <script type="text/javascript">
+    (function ($, undefined) {
 
-	<!-- Primary Page Layout
-	================================================== -->
+      var HHSGlobal = window.HHSGlobal;
 
-	<!-- Delete everything in this .container and get started on your own site! -->
+      function addGroupRepresentation(group) {
+        if (group) {
+          var $item = $("<li>").addClass("repo grid-1 " + group.category);
+          var $link = $("<a>").attr("href", "group.html?name=" + group.name).appendTo($item);
+          $link.append($("<h2>").text(group.name));
+          $link.append($("<p>").text(group.description));
+          $item.appendTo("#repos");
+          }
+      }
 
-	<div class="container">
-		{% include title.html %}
+      function processMembers(members) {
+          $(function () {
+            if (members) {
+              $("#num-members").text(members.length);
+            }
+          });
+        };
 
-		{% include nav.html %}
+      function addGroups(repoGroups) {
+        var repoGroups = hhs_groups;
 
-		<div class="thirteen columns documentation">
+        $(function () {
+          $.each(repoGroups, function (i, group) {
+            addGroupRepresentation(group);
+          });
+        });
 
-		<h1 id='getting_started_with_blue_button'>Getting Started with Blue Button+</h1>
-
-		<p>Blue Button is the symbol for a patient&#8217;s access to their own data. Blue Button+ is the ability to get records in a human-readable and machine-readable format; and to send them where they choose. This enables a consumer to do everything from printing a physical copy to sharing it with a third party application.</p>
-
-
-		</div>
-
-		<div class="row pointers">
-			<div class="sixish columns pointer">
-				<div class="point">
-				<h3>For Data Holders / Providers</h3>
-				<p>Learn how to structure a patient health record and how to transmit it to a patient’s location of choosing. Meet <a href="mu2.html">MU 2 -  VDT requirement</a>.</p>
-
-
-				<div class="quick-link">
-					<p><a href="healthrecords.html"><span class="num">1</span> Structure health data as C-CDA</a></p>
-				</div>
-
-
-				<div class="quick-link">
-					<p><a href="transmit-using-direct.html"><span class="num">2</span> Transmit health data using Direct</a></p>
-				</div>
-
-				<div class="quick-link">
-					<p><a href="transmit-using-direct.html#triggers"><span class="num">3</span> Implement automation/triggers</a></p>
-				</div>
-
-
-				<div class="quick-link">
-					<p><a href="transmit-using-direct.html#bundle"><span class="num">4</span> Retrieve BB+ Patient Trust Bundle</a></p>
-				</div>
-
-				</div>
-
-			</div>
-
-			<div class="sixish columns pointer">
-				<div class="point">
-				<h3>For Third Party Applications</h3>
-				<p>Learn how to build applications powered by Blue Button+ receiving structured patient health records and getting automated access from dataholders.</p>
-
-				<div class="quick-link">
-					<p><a href="healthrecords.html"><span class="num">1</span> Parse health data as C-CDA</a></p>
-				</div>
+      }
+      addGroups();
 
 
-				<div class="quick-link">
-					<p><a href="receive-using-direct.html"><span class="num">2</span> Receive health data using Direct</a></p>
-				</div>
+      HHSGlobal.processReposCallback = HHSGlobal.addRecentlyUpdatedRepos;
+      HHSGlobal.processMembersCallback = processMembers;
 
+      HHSGlobal.initializeCache();
+      HHSGlobal.findAllOrgsFromReposCatalog(hhs_repos);
 
-				<div class="quick-link">
-					<p><a href="receive-using-direct.html#bundle"><span class="num">3</span> Submit your anchor to trust bundle</a></p>
-				</div>
+      if ( browserIsIELessThan10 ) {
+        HHSGlobal.getReposFromOneOrg   = HHSGlobal.getReposFromOneOrgWithoutCORS;
+        HHSGlobal.getMembersFromOneOrg = HHSGlobal.getMembersFromOneOrgWithoutCORS;
+        }
 
-				<div class="quick-link">
-					<p><a href="receive-using-direct.html"><span class="num">4</span> Retrieve BB+ Provider Trust Bundle</a></p>
-				</div>
+      HHSGlobal.getJSONIfModified = HHSGlobal.getJSONIfModifiedWithCORS;
+      HHSGlobal.getReposFromAllOrgs();
+      HHSGlobal.getMembersFromAllOrgs();
 
-				</div>
-			</div>
+    })(jQuery);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper" class="grid clearfix">
+      <div id="main" class="grid-1">
+        <div id="logo"><h1>HHS on GitHub</h1></div>
+        <a href="http://hhs.github.io/">
+          <img src="images/logo.png" alt="HHS Logo" height="200" width="200">
+        </a>
+        <h2>HHS</h2>
+        <h2>on</h2>
+        <h2>GitHub</h2>
+        <p>Visit <a href="http://www.github.com/HHS/hhs.github.com">github.com/HHS</a></p>
+        <p><a href="https://github.com/HHS/hhs.github.com/wiki/_pages">Wiki Pages</a></p>
+      </div>
 
-		</div>
+      <div class="grid grid-3">
+        <div id="recently-updated" class="grid-2 omega header">
+          <h1>Recently updated <a href="https://github.com/hhs/repositories">View All on GitHub</a></h1>
+          <ol id="recently-updated-repos"></ol>
+        </div>
 
+        <div id="statistics" class="grid-1 alpha header">
+          <h1>Statistics</h1>
+          <p>
+            <a href="https://github.com/hhs/repositories"><span id="num-repos"><img src="images/spinner.gif" /></span> public repos</a>
+            <br>
+            <a href="https://github.com/hhs?tab=members"><span id="num-members"><img src="images/spinner.gif" /></span> members</a>
+          </p>
+          <p class="email"><a href="mailto:____@hhs.gov">Future Email</a></p>
+        </div>
+      </div>
 
-			<div class="thirteen columns offset-by-three">
-				<p>This Blue Button+ guidance was developed though <a href="http://www.healthit.gov/newsroom/about-onc">ONC’s</a> <a href="http://wiki.siframework.org/Automate+Blue+Button+Initiative">Standards and Interoperability Framework</a> initiative with input from more than 70 organizations. These docs are hosted on <a href="https://github.com/blue-button/docs">GitHub</a>, if you have any suggestions create a <a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
-			</div>
+      <div class="grid grid-3">
+        <div id="category" class="grid-1 iota iotaleft categoryheader category1”>
+          <h4>Category 1</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotacenter categoryheader category2">
+          <h4>Category 2</h4>
+        </div>
+        <div id="category" class="grid-1 iota iotaright categoryheader category3”>
+          <h4>Category 3</h4>
+        </div>
+      </div>
 
-	</div><!-- container -->
-
-
-	{% include getsat.html %}
-
-	<!-- End Document
-	================================================== -->
-</body>
+      <ol id="repos"></ol>
+    </div>
+  </body>
 </html>
