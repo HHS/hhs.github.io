@@ -1,256 +1,71 @@
-html {
-  background: url("bg.png") repeat;
-}
+header {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 40px;
+	text-align: center;
+	color: black;
+	}
+
+footer {
+	text-align:center;
+	font-size: 10px;
+	margin: 50px;
+	}	
 
 body {
-  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.4;
-  color: #666;
-  min-width: 960px;
-}
-
-h1 {
-  font-weight: bold;
-  font-size: 20px;
-  color: #333;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 20px;
-  color: #0084b4;
-}
-
-a:link, a:visited {
-  color: #0084b4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-#wrapper {
-  position: relative;
-  width: 960px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
   margin: 0 auto;
-  padding: 20px 0;
-}
+  max-width: 700px;
+  line-height: 1.4;
+  color: black;
+	}
 
-#main {
-  height: 400px;
-  text-align: center;
-}
+nav {
+	margin: 10px;
+	}	
 
-#main, div.header, li.repo {
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
+section {
+	margin: 20px;
+	}
 
-#main h1 {
-  margin: 30px 0;
-}
+.projects {
+    
+    }
 
-#main h1, #main p {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-#main p {
-  font-size: 11px;
-  line-height: 2;
-}
-
-#category2, div.categoryheader, li.repo {
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-#category, div.categoryheader, li.repo {
-  background: white;
-  margin-bottom: 20px;
-}
-
-
-#logo {
-  width: 200px;
-  height: 20;
-  margin: 15px 0 0 15px;
-}
-
-#logo h1 {
-  margin: 0;
-}
-
-div.header {
-  height: 130px;
-}
-
-div.categoryheader {
-  height: 30px;
-}
-
-div.categoryheader h4 {
-  height: 30px;
-  line-height : 30px;
-}
-
-div.header h1, div.header p {
-  margin: 10px 15px 0;
-}
-
-div.header h1 {
-  margin-bottom: 10px;
-}
-
-#num-repos, #num-members {
-  font-size: 14px;
+.project {
+    width: 200px;
+    float: left;
+    border: 1px solid #CCC;
+    height: 100px;
+    margin: 3px;
+    padding: 5px 5px;
+    position: relative;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+	}
+	
+h1 {
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  color: #0084b4;
-  line-height: 15px;
-}
+  font-size: 20px;
+  color: black;
+	}
 
-#statistics a:link, #statistics a:visited {
-  color: inherit;
-}
+h2, summary {
+  font-weight: bold;
+  font-size: 20px;
+	}
 
-#statistics p.email {
-  margin-top: 6px;
-  font-size: 11px;
-}
+h3, {
+  font-size: 16px;
+	}
 
-#recently-updated h1 a {
-  font-weight: normal;
-  font-size: 11px;
-}
+table {
+	text-align: left;
+	border-color: black;
+	}
 
-#recently-updated-repos {
-  margin-left: 15px;
-}
 
-#recently-updated-repos li {
-  line-height: 1.5;
-}
-
-#recently-updated-repos li span {
-  display: inline-block;
-  padding: 0 1px;
-}
-
-#recently-updated-repos li span {
-  font-size: 11px;
-}
-
-#recently-updated-repos li span.name {
-  padding: 0 6px 0 0;
-  font-size: 13px;
-}
-
-#recently-updated-repos li span.time a,
-#recently-updated-repos li span.watchers a,
-#recently-updated-repos li span.forks a {
-  color: #999;
-}
-
-li.repo {
-  height: 200px;
-}
-
-li.repo > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-}
-
-li.repo a:hover {
-  background: #efefef;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-li.repo h2, li.repo h3, li.repo p {
-  margin: 10px 15px;
-}
-
-li.repo h2 {
-  margin-bottom: 2px;
-  max-width: 160px;
-  overflow: hidden;
-}
-
-li.repo h3 {
-  font-size: 11px;
-  margin-top: 2px;
-  margin-bottom: 15px;
-  color: #999;
-}
-
-.repo:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-right: 50px solid #0080b0;
-  pointer-events: none;
-}
-
-.repo:after {
-  border-right-color: #ffffff;
-}
-
-.repo.biology:after {
-  border-right-color: #0080b0;
-}
-
-.repo.translational:after {
-  border-right-color: #6aad2d;
-}
-
-.repo.semantics:after {
-  border-right-color: #777777;
-}
-
-div.categoryheader.biology {
-  background: #0080b0;
-  color: #0080b0;
-}
-
-div.categoryheader.translational {
-  background: #6aad2d;
-  color: #6aad2d;
-}
-
-div.categoryheader.semantics {
-  background: #777777;
-  color: #777777;
-}
-
-@keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-moz-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-webkit-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-@-ms-keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
-
-@keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-moz-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-webkit-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-@-ms-keyframes medium-swing { 0% { margin-top: 0px } 50% { margin-top: -20px } 100% { margin-top: 0px } }
-
-@keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-moz-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-webkit-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
-@-ms-keyframes large-swing { 0% { margin-top: 0px } 50% { margin-top: -40px } 100% { margin-top: 0px } }
 

@@ -1,10 +1,6 @@
 var hhs_groups = [
-  {
-    "name”:”NCIP”,
-    "description”:”Repos for National Cancer Informatics Program (NCIP) Open Source at the National Cancer Institute”,
-    "category”:”Category 1”
-  },
-  {
+
+  {    "name":"NCIP",     "description":"Repos for National Cancer Informatics Program (NCIP) Open Source at the National Cancer Institute”,    "category”:”ToolBox”  },  {    "name":"PillBox",     "description":"Pillbox's API, data, and images are powerful tools for drug identification and reference”,    "category”:”ToolBox”  },  {    "name":"Service Locator - Comprehensive Healthcare",     "description":"This location-based tool allows you to search near your current location for community health clinics that offer primary care including: wellness, check ups, vaccines, testing, sexual health, family planning, dental, mental health, substance abuse treatment, and HIV/AIDS care. It is available as an API, widget and website.”,    "category”:”Directories”  },  {    "name":"DIRLINE",     "description":"DIRLINE (Directory of Information Resources Online) is the National Library of Medicine's online database containing location and descriptive information about a wide variety of information resources including organizations, research resources, projects, and databases concerned with health and biomedicine.”,    "category”:”Directories”  },  {    "name":"Health Hotlines",     "description":"Online database of health-related organizations operating toll-free telephone services. The database also includes information on services and publications available in Spanish.”,    "category”:”Directories”  },  {    "name":"HHS Content Syndication",     "description":"Display HHS public health content on your website or app by using this content syndication API ”,    "category”:”Content”  },  {    "name":"BlueButtonPlus",     "description":"Blue Button+ ecosystem of tools and resources to help patients access and become empowered with their health data.”,    "category”:”ToolBox”  },  {
     "name":"Additional repositories",
     "description":"Repositories that are not categorized into the existing groups"
   },

@@ -1,124 +1,47 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <title>HHS GitHub</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HHS on GitHub</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
 
-    <!-- Loading list of repos and groups from JSON files -->
-    <script type="text/javascript" src=“hhs-group.json"></script>
-    <script type="text/javascript" src="hhs-repo.json"></script>
-    <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="assets/strftime.js"></script>
-    <script type="text/javascript" src="assets/hhsnamespace.js"></script>
+</head>
+<body>
+<nav>
+	<a href=/index.html">home</a> |
+	<a href="#">accounts</a> |
+	<a href="#repos">repos</a> |
+	<a href="#">apps</a>  |
+	<a href="#">data</a>
+	</nav>
+<header><h1>HHS on Github</h1>
+</header>
+<section>
+<hr />
+Divisions/Programs of the Department of Health and Human Services (HHS) have organizational accounts on GitHub listed below. To learn more about HHS visit <a href="www.hhs.gov">hhs.gov</a>
+</section>
+<section>
+<hr />
+<summary>GitHub Accounts</summary>
+	<ul>
+		<li><a href="https://github.com/NCIP">NCIP</a> - National Cancer Informatics Program - NIH</li>
+		<li><a href="https://github.com/ncbi">NLM</a> - National Library of Medicine - NIH/NCBI</li>
+		<li><a href="https://github.com/informaticslab">CDC</a> Public Health Informatics Lab - Centers for Disease Control and Prevention</li>
+		<li><a href="https://github.com/FDA">FDA</a> - Food and Drug Administration</li>
+		<li><a href="https://github.com/blue-button">Blue Button</a> - ONC - Office of the National Coordinator for Health IT</li>
+	</ul>
+</section>
 
-    <script>
-      var browserIsIELessThan10 = false;
-      if ($.browser.msie && parseInt($.browser.version, 10) < 10){
-        browserIsIELessThan10 = true;
-        }
-    </script>
+<section>
+<hr />
+	<summary>GitHub Repositories</summary>
+	<table>
+	<tr><td><a href="https://github.com/nasa/CoECI-CMS-Healthcare-Fraud-Prevention/">Insurance fraud</a></td> <td>Software that supports a data exchange network that enables healthcare insurance-paying entities in both the public and private sector to safely and securely share information for purposes of prevention and detection of fraud, waste and abuse across partners. A collaboration of NASA, CMS, Harvard and TopCoder</td><tr></table>
+</section>
 
-    <script type="text/javascript">
-    (function ($, undefined) {
+<footer><div>Some links on this website may direct to non-HHS locations.<br />HHS does not endorse or guarantee the integrity of information on these external sites.</div></footer>
 
-      var HHSGlobal = window.HHSGlobal;
-
-      function addGroupRepresentation(group) {
-        if (group) {
-          var $item = $("<li>").addClass("repo grid-1 " + group.category);
-          var $link = $("<a>").attr("href", "group.html?name=" + group.name).appendTo($item);
-          $link.append($("<h2>").text(group.name));
-          $link.append($("<p>").text(group.description));
-          $item.appendTo("#repos");
-          }
-      }
-
-      function processMembers(members) {
-          $(function () {
-            if (members) {
-              $("#num-members").text(members.length);
-            }
-          });
-        };
-
-      function addGroups(repoGroups) {
-        var repoGroups = hhs_groups;
-
-        $(function () {
-          $.each(repoGroups, function (i, group) {
-            addGroupRepresentation(group);
-          });
-        });
-
-      }
-      addGroups();
-
-
-      HHSGlobal.processReposCallback = HHSGlobal.addRecentlyUpdatedRepos;
-      HHSGlobal.processMembersCallback = processMembers;
-
-      HHSGlobal.initializeCache();
-      HHSGlobal.findAllOrgsFromReposCatalog(hhs_repos);
-
-      if ( browserIsIELessThan10 ) {
-        HHSGlobal.getReposFromOneOrg   = HHSGlobal.getReposFromOneOrgWithoutCORS;
-        HHSGlobal.getMembersFromOneOrg = HHSGlobal.getMembersFromOneOrgWithoutCORS;
-        }
-
-      HHSGlobal.getJSONIfModified = HHSGlobal.getJSONIfModifiedWithCORS;
-      HHSGlobal.getReposFromAllOrgs();
-      HHSGlobal.getMembersFromAllOrgs();
-
-    })(jQuery);
-    </script>
-  </head>
-  <body>
-    <div id="wrapper" class="grid clearfix">
-      <div id="main" class="grid-1">
-        <div id="logo"><h1>HHS on GitHub</h1></div>
-        <a href="http://hhs.github.io/">
-          <img src="images/logo.png" alt="HHS Logo" height="200" width="200">
-        </a>
-        <h2>HHS</h2>
-        <h2>on</h2>
-        <h2>GitHub</h2>
-        <p>Visit <a href="http://www.github.com/HHS/hhs.github.com">github.com/HHS</a></p>
-        <p><a href="https://github.com/HHS/hhs.github.com/wiki/_pages">Wiki Pages</a></p>
-      </div>
-
-      <div class="grid grid-3">
-        <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated <a href="https://github.com/hhs/repositories">View All on GitHub</a></h1>
-          <ol id="recently-updated-repos"></ol>
-        </div>
-
-        <div id="statistics" class="grid-1 alpha header">
-          <h1>Statistics</h1>
-          <p>
-            <a href="https://github.com/hhs/repositories"><span id="num-repos"><img src="images/spinner.gif" /></span> public repos</a>
-            <br>
-            <a href="https://github.com/hhs?tab=members"><span id="num-members"><img src="images/spinner.gif" /></span> members</a>
-          </p>
-          <p class="email"><a href="mailto:____@hhs.gov">Future Email</a></p>
-        </div>
-      </div>
-
-      <div class="grid grid-3">
-        <div id="category" class="grid-1 iota iotaleft categoryheader category1”>
-          <h4>Category 1</h4>
-        </div>
-        <div id="category" class="grid-1 iota iotacenter categoryheader category2">
-          <h4>Category 2</h4>
-        </div>
-        <div id="category" class="grid-1 iota iotaright categoryheader category3”>
-          <h4>Category 3</h4>
-        </div>
-      </div>
-
-      <ol id="repos"></ol>
-    </div>
-  </body>
+</body>
 </html>
+
