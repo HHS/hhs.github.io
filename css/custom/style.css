@@ -1,0 +1,27 @@
+body {
+	font-family: 'Raleway:200', sans-serif;
+	}
+
+header {
+	text-align:center;
+	}
+
+footer {
+	text-align:center;
+	font-size: 10px;
+	}
+
+summary {
+  font-weight: bold;
+  font-size: 20px;
+	}
+
+	
+td {
+	text-align: left;
+	vertical-align: top;
+	margin: 4px;
+	}
+
+
+

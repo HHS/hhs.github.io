@@ -2,73 +2,121 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>HHS on GitHub</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
-
+	
+	<!-- Custom styles for this template -->
+    	<link href="css/custom/style.css" type="text/css" rel="stylesheet">
+	    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+	    
+	<!-- Bootstrap core CSS -->
+    	<link href="css/bootstrap-3.1.1-dist-css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    
 </head>
 <body>
-<nav>
-	<a href="index.html">home</a> |
-	<a href="#">accounts</a> |
-	<a href="#repos">repos</a> |
-	<a href="#">apps</a>  |
-	<a href="#">data</a>
-	</nav>
-<header><h1>HHS on Github</h1>
-</header>
-<section>
-<hr />
-Divisions/Programs of the Department of Health and Human Services (HHS) have organizational accounts on GitHub listed below. To learn more about HHS visit <a href="www.hhs.gov">hhs.gov</a>
-</section>
-<section>
-<hr />
-<summary>GitHub Accounts</summary>
-	<ul>
-		<li><a href="https://github.com/NCIP">NCIP</a> - National Cancer Informatics Program - NIH</li>
-		<li><a href="https://github.com/ncbi">NLM</a> - National Library of Medicine - NIH/NCBI</li>
-		<li><a href="https://github.com/informaticslab">CDC</a> Public Health Informatics Lab - Centers for Disease Control and Prevention</li>
-		<li><a href="https://github.com/FDA">FDA</a> - Food and Drug Administration</li>
-		<li><a href="https://github.com/blue-button">Blue Button</a> - ONC - Office of the National Coordinator for Health IT</li>
-	</ul>
-</section>
 
-<section>
-<hr />
-	<summary>GitHub Repositories</summary>
-	<table>
-	<tr><td><a href="https://github.com/nasa/CoECI-CMS-Healthcare-Fraud-Prevention/">Insurance fraud</a></td> <td>Software that supports a data exchange network that enables healthcare insurance-paying entities in both the public and private sector to safely and securely share information for purposes of prevention and detection of fraud, waste and abuse across partners. A collaboration of NASA, CMS, Harvard and TopCoder</td><tr></table>
-</section>
+<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+            <div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+        		    <span class="icon-bar"></span>
+           			<span class="icon-bar"></span>
+         		</button>
+        		<a class="navbar-brand" href="#">HHS on GitHub</a>
+        	</div>
+    <!--/.nav-collapse -->
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav"> <!-- add back in navbar-right -->
+            	<li class="active"><a href="#">home</a></li>
+            	<li><a href="#accounts">accounts</a></li>
+				<li><a href="#repos">repos</a></li>
+            	<li><a href="#apis">apis</a></li>
+            	<li><a href="#forms">forms</a></li>
+          	</ul>
+        	<form class="navbar-form navbar-right">
+        		<input type="text" class="form-control" placeholder="Search...">
+        	</form>
+        </div>
+    </nav>
 
-<section>
-	<hr />
-	<summary>APIs</summary>
-	<ul>
-		<li>API 101 from HHS Digital Strategy<a href="http://www.hhs.gov/digitalstrategy/open-data/api-101.html">Link</a></li>
-		<li>All APIs listed on healthdata.gov<a href="http://hub.healthdata.gov/dataset?res_format=API">Link</a></li>
-		<li>Open access articles available on PubMed <a href="http://www.ncbi.nlm.nih.gov/pmc/tools/oa-service/">Link</a></li>
-		<li>Health and wellness info available in English and Spanish<a href="http://healthfinder.gov/Developer/How_to_Use.aspx">Link</a></li>
-		<li>Text and multimedia content for syndication<a href="http://sourceforge.net/projects/contentservices/">Link</a></li>
-	</ul>
+<!-- Begin page content -->
+	<main class="container">		
+ 			<header class="page-header container">
+  				<h1><br />HHS on GitHub</h1>
+				<p style="font-style:italic; font-size:14px;">Collaborating with developers, the Department of Health and Human Services (HHS) protects health and provides essential human (social) services in America. To learn more about HHS visit <a href="www.hhs.gov">hhs.gov</a></p>
+			</header>
+
+			<section id="accounts">
+				<h4><summary>Accounts on GitHub</summary></h4>
+				<p>HHS divisions/programs may have organizational accounts on GitHub. See below.</p>
+				<ul>
+					<li><a href="https://github.com/NCIP">NCIP</a> - National Cancer Informatics Program - NIH</li>
+					<li><a href="https://github.com/ncbi">NLM</a> - National Library of Medicine - NIH/NCBI</li>
+					<li><a href="https://github.com/informaticslab">CDC</a> Public Health Informatics Lab - Centers for Disease Control and Prevention</li>
+					<li><a href="https://github.com/FDA">FDA</a> - Food and Drug Administration</li>
+					<li><a href="https://github.com/blue-button">Blue Button</a> - ONC - Office of the National Coordinator for Health IT</li>
+				</ul>
+			</section>
+
+			<section id="repos">
+			<hr />
+				<summary>Repos on GitHub</summary>
+				<p><br />Collaborations with other organizations</p>
+				<table class="table">
+					<tr><td>Need</td><td>Function</td><td>Description</td><tr>
+					<tr><td><a href="https://github.com/nasa/CoECI-CMS-Healthcare-Fraud-Prevention/">Prevent/detect fraud, waste, abuse</a></td><td>Helps insurers (payers) securely share info</td><td>Software that supports a data exchange network that enables healthcare insurance-paying entities in both the public and private sector to safely and securely share information for purposes of prevention and detection of fraud, waste and abuse across partners. A collaboration of NASA, CMS, Harvard and TopCoder</td><tr></table>
+			</section>
+
+
+			<section id="apis">
+				<hr />
+				<summary>APIs</summary>
+				<ul>
+					<li>API 101 from HHS Digital Strategy<a href="http://www.hhs.gov/digitalstrategy/open-data/api-101.html"> Link</a></li>
+					<li>All APIs listed on healthdata.gov<a href="http://hub.healthdata.gov/dataset?res_format=API"> Link</a></li>
+					<li>Open access articles available on PubMed <a href="http://www.ncbi.nlm.nih.gov/pmc/tools/oa-service/"> Link</a></li>
+					<li>Health and wellness info available in English and Spanish<a href="http://healthfinder.gov/Developer/How_to_Use.aspx"> Link</a></li>
+					<li>Text and multimedia content for syndication<a href="http://sourceforge.net/projects/contentservices/"> Link</a></li>
+				</ul>
+			</section>
+
+
+			<section id="forms">
+				<hr />
+				<Summary>Forms</Summary>
+				<p><br />Find all approved <strong>forms</strong> that HHS uses to collect info from the public (individuals and companies). OMB approves these forms and provides information from the forms on <strong>reginfo.gov</strong></p>
+				<p>     On reginfo.gov, go to the Information Collection Review (ICR) > Search page <a href="http://www.reginfo.gov/public/do/PRASearch">here</a></p>
+				<ol>
+					<li>Select Agency: Department of Health and Human Services</li>
+					<li>Select Sub-Agency: ___________</li>
+					<li>Select ICR Status: Active</li>
+					<li>Click: Search</li>
+					<img src="images/reginfo-ICR-search.png">
+				</ul>
+				<p>Notes:</p>
+				<p>For HHS forms, it is necessary to select a "Sub-Agency" because reginfo allows at most 1,000 results.</p>
+				<p>"Sub-Agencies" do not necessarily correspond with HHS operating and staff divisions. Rather the options best correspond with budgeting allocations.</p>
+				<p>All the data on can be downloaded via XML. See <a href="http://www.reginfo.gov/public/do/PRAXML">here</a></p>
+				<p><strong>So what?</strong></p>
+				<ul>
+					<li>Ever wondered what goes into an application to get a drug approved and marketed for sale in the United States? Find out! Make sure all the checkboxes are selected. See <a href="http://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=201403-0910-005">forms</a>. Or just<a href="http://www.fda.gov/downloads/AboutFDA/ReportsManualsForms/Forms/UCM321897.pdf">download</a>.
+					<li>What is the legal basis for FDA's authority to approve drugs? Read "Authorizing Statute(s)" that are always cited here. For example: Authorizing Statute(s): US Code: 42 USC 262 Name of Law: PHS Act US Code: 21 USC 356b Name of Law: FFDCA</li>
+					<li>How many adverse event report responses are anticipated? Read the <a href="http://www.reginfo.gov/public/do/PRAViewDocument?ref_nbr=201207-0910-003>supporting statement">section 12</a> to find out how burden is calculated.</li>
+				</ul>
+			</section>
+			<hr />
+	</main>	
 	
-</section>
+	<footer class="container">
+		<p class="text-muted">Some links on this website may direct to non-HHS locations.<br />HHS does not endorse or guarantee the integrity of information on these external sites.</p></footer>
 
-<section>
-	<hr />
-	<Summary>Data</Summary>
-	<ul>
-		<li>Find all approved forms that HHS uses to collect info from the public (individuals or companies)</li>
-			<li>OMB approves these forms and provides information from the forms on reginfo.gov</li>
-			<li>Go to Information Collection Review > Search page <a href="http://www.reginfo.gov/public/do/PRASearch">here</a></li>
-			<li>Select Agency: Department of Health and Human Services</li>
-			<li>Select Sub-Agency: ___________</li>
-			<li>Select ICR Status: Active</li>
-			<li>Click: Search</li>
-			
-	</ul>
-</section>
-
-<footer><div>Some links on this website may direct to non-HHS locations.<br />HHS does not endorse or guarantee the integrity of information on these external sites.</div></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
 
 </body>
 </html>
