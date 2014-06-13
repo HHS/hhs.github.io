@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head
+
+	<meta content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />	
+    <meta name="description" content="Developer related resources for using health and human services data.">
+	<title>HHS on GitHub</title>
+	
+	<!-- Custom styles for this template -->
+    	<link href="css/custom/style.css" type="text/css" rel="stylesheet">
+	    <link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+	    
+	<!-- Bootstrap core CSS -->
+    	<link href="css/bootstrap-3.1.1-dist-css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+            <div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+        		    <span class="icon-bar"></span>
+           			<span class="icon-bar"></span>
+         		</button>
+        		<a class="navbar-brand" href="#">HHS on GitHub</a>
+        	</div>
+    <!--/.nav-collapse -->
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav"> <!-- add back in navbar-right -->
+            	<li class="active"><a href="#">home</a></li>
+            	<li><a href="#accounts">accounts</a></li>
+				<li><a href="#repos">repos</a></li>
+            	<li><a href="#apis">apis</a></li>
+            	<li><a href="/forms">forms</a></li>
+          	</ul>
+      <!-- not working yet  
+        	<form class="navbar-form navbar-right">
+        		<input type="text" class="form-control" placeholder="Search...">
+        	</form> -->
+        </div>
+    </nav>
+
+	<main class="container">		
+ 			<header class="page-header container">
+  				<h1><br />HHS on GitHub</h1>
+				<p style="font-style:italic; font-size:14px;">Collaborating with developers, the <span itemscope itemtype="http://schema.org/Organization" itemprop="name">Department of Health and Human Services (HHS)</span> protects health and provides essential human (social) services in America. To learn more about HHS visit <a itemscope itemtype="http://schema.org/Organization" itemprop="url" href="www.hhs.gov">hhs.gov</a></p>
+			</header>
+
+			<section id="forms">
+				<hr />
+				<Summary>Forms</Summary>
+				<p><br />Find all approved <strong>forms</strong> that HHS uses to collect info from the public (individuals and companies). OMB approves these forms and provides information from the forms on <strong>reginfo.gov</strong></p>
+				<p>    For example, FDA OMB approved forms are listed <a href="/forms_fda">here</a> with OMB Control Numbers (i.e., ID), user-generated tags, and abstracts. Refer back to reginfo.gov for more info using the OMB Control Number.</p>
+				<p>     On reginfo.gov, go to the Information Collection Review (ICR) > Search page <a href="http://www.reginfo.gov/public/do/PRASearch">here</a></p>
+				<ol>
+					<li>Select Agency: Department of Health and Human Services</li>
+					<li>Select Sub-Agency: ___________</li>
+					<li>Select ICR Status: Active</li>
+					<li>Click: Search</li>
+					<img src="images/reginfo-ICR-search.png"; img-size="medium">
+				</ul>
+				<p>Notes:</p>
+				<p>For HHS forms, it is necessary to select a "Sub-Agency" because reginfo allows at most 1,000 results.</p>
+				<p>"Sub-Agencies" do not necessarily correspond with HHS operating and staff divisions. Rather the options best correspond with budgeting allocations.</p>
+				<p>All the data on can be downloaded via XML. See <a href="http://www.reginfo.gov/public/do/PRAXML">here</a></p>
+				<p><strong>So what?</strong></p>
+				<ul>
+					<li>Ever wondered what goes into an application to get a drug approved and marketed for sale in the United States? Find out! Make sure all the checkboxes are selected. See <a href="http://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=201403-0910-005">form</a>. Or just <a href="http://www.fda.gov/downloads/AboutFDA/ReportsManualsForms/Forms/UCM321897.pdf">download</a>.
+					<li>What is the legal basis for FDA's authority to approve drugs? Read "Authorizing Statute(s)" that are always cited here. For example: Authorizing Statute(s): US Code: 42 USC 262 Name of Law: PHS Act US Code: 21 USC 356b Name of Law: FFDCA</li>
+					<li>How many adverse event report responses are anticipated? Read the <a href="http://www.reginfo.gov/public/do/PRAViewDocument?ref_nbr=201207-0910-003>supporting statement">section 12</a> to find out how burden is calculated.</li>
+				</ul>
+			</section>
+			<hr />
+	</main>	
+	
+	<footer class="container">
+		<p class="text-muted">Some links on this website may direct to non-HHS locations.<br />HHS does not endorse or guarantee the integrity of information on these external sites.</p></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+
+</body>
+</html>
