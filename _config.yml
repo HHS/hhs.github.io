@@ -1,0 +1,15 @@
+auto: true
+server: true
+exclude:
+  - README.md
+  - api
+  - tmp
+  - bin
+  - data_store
+  - pillbox-original-process
+baseurl: 
+pygments: true
+permalink: /:docs.html
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]

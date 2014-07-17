@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name='HHS on GitHub' content='index'/>
+<title>hhs.github.io</title>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
+</head>
+<body data-offset='80'>
+	<!-- Header -->
+	<div class="masthead col12 clearfix row2 keyline-bottom">
+		<div class="limiter clearfix">
+			<a href='{{site.baseurl}}/'>
+      <h1 class='col6 pad1y logo'>
+        <span class='logo nlm'></span>
+        <span class='logo text'>HHS on GitHub</span>
+      </h1>
+      </a>
+			<div class="nav col8 nav-header" class="col2 text-right pad2y contain clearfix noprint ">
+        <a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
+        <a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
+			</div>
+		</div>
+  	</div>
+  	<!-- Middle window section -->
+  	<div class='limiter pad2y clearfix'>
+  		<div class='col5 pad4y'>
+  			<h2>US Department of </br>Health and Human Services (<a href="www.hhs.gov">HHS</a>)</h2>
+			<p>This site is primarily a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and a GitHub.io page.</p>
+  			<p>HHS protects health and provides essential human services. HHS has 11 operating divisions, including 8 agencies in the US Public Health Service and 3 human services agencies that administer a wide variety of health and human services and conduct life-saving research for the nation. HHS has 17 staff offices that oversee operations and provide guidance on policy issues and program implementation.</p>
+  		</div>
+  		<div class='margin1 col6 pad4y nav'>
+  				<a href='#data' class='truncate contain clearfix pad2 keyline-bottom'>
+            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/data.png);"></span>
+            <span class='prose'>HHS-related GitHub Accounts</span>
+          </a>
+					<a href='#feedback' class='truncate contain clearfix pad2 keyline-bottom'>
+            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/contribute.png);"></span>
+            <span class='prose'>HHS-related GitHub Repositories</span>
+          </a>
+          <a href='#api' class='truncate contain clearfix pad2'>
+            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/api.png);"></span>
+            <span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          </a>
+  		</div>
+  	</div>
+    <!-- Bottom reader columns -->
+    {% for post in site.categories.docs %}
+    <div class='col12 pad4y fill-{{post.background-color}} keyline-top'>
+      <div class='contain clip limiter row12 clearfix'>
+        <div class='col6'>
+          <h2><a class='data' href='#{{post.class}}' id='{{post.class}}'> {{post.title}} </a> </h2>
+          {{post.content}}
+        </div>
+        {% if post.columns == 2 %}
+          <div class='col2 pad2x'>
+            <h3><a href='{{post.link1}}'> {{post.link1title}} </a></h3>
+            <p>{{post.link1info}}</p>
+          </div>
+          <div class='col2 pad2x'>
+            <h3><a href='{{post.link2}}'> {{post.link2title}} </a></h3>
+              <p>{{post.link2info}}</p>
+
+            <h3><a href='{{post.link3}}'> {{post.link3title}} </a></h3>
+              <p>{{post.link3info}}</p>
+
+            <h3><a href='{{post.link4}}'> {{post.link4title}} </a></h3>
+              <p>{{post.link4info}}</p>
+
+            <h3><a href='{{post.link5}}'> {{post.link5title}} </a></h3>
+              <p>{{post.link5info}}</p>
+
+            <h3><a href='{{post.link6}}'> {{post.link6title}} </a></h3>
+              <p>{{post.link6info}}</p>
+
+            <h3><a href='{{post.link7}}'> {{post.link7title}} </a></h3>
+              <p>{{post.link7info}}</p>
+
+             <h3><a href='{{post.link8}}'> {{post.link8title}} </a></h3>
+              <p>{{post.link8info}}</p>
+          </div>
+        {% elsif post.columns == 1 %}
+           <div class='col4 pad4x'>
+            <h3><a href='{{post.link1}}'> {{post.link1title}} </a></h3>
+              <p>{{post.link1info}}</p>
+
+            <h3><a href='{{post.link2}}'> {{post.link2title}} </a></h3>
+              <p>{{post.link2info}}</p>
+
+            <h3><a href='{{post.link3}}'> {{post.link3title}} </a></h3>
+              <p>{{post.link3info}}</p>
+        {% endif %}
+        </div>
+  		</div>
+  	</div>
+  	{% endfor %}
+    <!-- Footer -->
+    <div class='content-footer'>
+      <div class='limiter col12 clearfix'>
+          <span class='nih'></span>
+          <span class='hhs'></span>
+          <h6>hhs.github.io is a resource of the <a href=''>U.S. Department of Health and Human Services</a>.</h6>
+      </div>
+    </div>
+
+	<!-- Google Analytics -->
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-8398517-4', 'hhs.github.io');
+	ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
