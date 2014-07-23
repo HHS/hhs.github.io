@@ -370,8 +370,8 @@ a {
 /*----------------------------------
    HHS logo
 -----------------------------------*/
-.logo .nlm {
-  background-image: url(../{{site.baseurl}}/images/nlm-logo.png);
+.logo .hhs-lg {
+  background-image: url(../{{site.baseurl}}/images/logos/hhs-lg.png);
   background-repeat: no-repeat;
   display: inline-block;
   width: 50px;
@@ -380,18 +380,7 @@ a {
   float: left;
   margin-right: 5px;
 }
-.nih {
-  background-image: url(../{{site.baseurl}}/images/nih-logo-25px.png);
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  text-indent: -999em;
-  float: left;
-  margin-right: 5px;
-  opacity: 0.7;
-}
-.hhs {
+.hhs-sm {
   background-image: url(../{{site.baseurl}}/images/hhs-logo-25px.png);
   background-repeat: no-repeat;
   display: inline-block;
@@ -596,7 +585,7 @@ table th {
   border-bottom: 1px solid #ddd;
   }
 table td {
-  vertical-align: top;
+  vertical-align: center;
   }
 table th + th, table td + td {
   border-left: 1px solid #ddd;

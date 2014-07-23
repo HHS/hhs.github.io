@@ -1,0 +1,49 @@
+- name: Blue Button
+  icon: 57-download
+  github: blue-button
+  agency: ONC
+  agency-website: www.healthit.gov
+  
+- name: Centers for Medicare & Medicaid Services
+  icon: 77-ekg
+  github: CMSgov
+  agency: CMS
+  agency-website: www.cms.gov
+  
+- name: Dept of Health & Human Services
+  icon: 99-umbrella
+  github: hhs
+  agency: HHS
+  agency-website: www.hhs.gov
+
+- name: Food & Drug Administration
+  icon: 94-pill
+  github: FDA
+  agency: FDA
+  agency-website: www.fda.gov
+  
+- name: HHS IDEA Lab
+  icon: 84-lightbulb
+  github: HHSIDEALab
+  agency: IDEALab
+  agency-website: www.hhs.gov/idealab
+  
+- name: National Cancer Informatics Program
+  icon: 20-gear2
+  github: NCIP
+  agency: NIH
+  agency-website: www.nih.gov
+
+- name: National Center for Biotechnology Information (NCBI)
+  icon: 91-beaker-2
+  github: ncbi
+  agency: NIH
+  agency-website: www.nih.gov
+  
+- name: Public Health Informatics Lab
+  icon: 73-radar
+  github: informaticslab
+  agency: CDC
+  agency-website: www.cdc.gov
+  
+ 

@@ -1,0 +1,32 @@
+- name: CKANext data.json
+  icon: 104-index-cards
+  github: ckanext-datajson
+  info: Custom CKAN extension for the HHS 'dataset' catalog
+  notes: What is <a href="https://en.wikipedia.org/wiki/CKAN">CKAN</a>?
+
+- name: Healthcare Fraud Prevention Partnership
+  icon: 132-ghost
+  github: CoECI-CMS-Healthcare-Fraud-Prevention
+  info: Application that supports a data exchange network for preventing and detecting fraud, waste and abuse across health insurance payers.
+  notes: 
+  
+- name: hhs.github.io
+  icon: 92-test-tube
+  github: hhs.github.io
+  info: Jekyll code that runs this website.
+
+- name: Medicaid Provider Enrollment Screener
+  icon: 123-id-card
+  github: coeci-cms-mpsp
+  info: Efficient multi-state, multi-program provider screening application capable of risk scoring, credentialing validation, identify authentication, and sanction checks. 
+
+- name: Pillbox for Developers
+  icon: 94-pill
+  github: pillbox-data-process
+  info: Code that cleans up, or processes, source data for prescription, over-the-counter, homeopathic and veterinary oral solid dosage medications (pills) marketed in the United States. Produces an easy-to-use, "pill-focused" dataset. 
+  
+- name: Voice of Consumer (VOC)
+  icon: 66-microphone
+  github: voc-admin/wiki
+  info: The Voice of Consumer (VOC) tool is a key component of the HHS website performance measurement framework.
+

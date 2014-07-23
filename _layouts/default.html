@@ -1,57 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<meta name='HHS on GitHub' content='index'/>
-<title>hhs.github.io</title>
-<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
+	<meta charset=utf-8 />
+	<meta name='hhs.github.io' content='index'/>
+	<title>HHS on Github</title>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400|Roboto:400,100' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
 </head>
 <body data-offset='80'>
 	<!-- Header -->
-	<div class="masthead col12 clearfix row2 keyline-bottom">
+	<header class="masthead col12 clearfix row2 keyline-bottom">
 		<div class="limiter clearfix">
-			<a href='{{site.baseurl}}/'>
-      <h1 class='col6 pad1y logo'>
-        <span class='logo nlm'></span>
-        <span class='logo text'>HHS on GitHub</span>
-      </h1>
-      </a>
+			<a href='{{site.baseurl}}/'><h1 class='col6 pad1y logo'><span class='logo hhs-lg'></span><span class='logo text'>HHS on GitHub</span></h1></a>
 			<div class="nav col8 nav-header" class="col2 text-right pad2y contain clearfix noprint ">
-        <a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
-        <a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
+        		<a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
+        		<a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
 			</div>
 		</div>
-  	</div>
-  	<!-- Middle window section -->
-  	<div class='limiter pad2y clearfix'>
+  	</header>
+  	<!-- Top section -->
+  	<section id='home' class='limiter pad2y clearfix'>
   		<div class='col5 pad4y'>
   			<h2>US Department of </br>Health and Human Services (<a href="www.hhs.gov">HHS</a>)</h2>
-			<p>This site is primarily a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and a GitHub.io page.</p>
-  			<p>HHS protects health and provides essential human services. HHS has 11 operating divisions, including 8 agencies in the US Public Health Service and 3 human services agencies that administer a wide variety of health and human services and conduct life-saving research for the nation. HHS has 17 staff offices that oversee operations and provide guidance on policy issues and program implementation.</p>
+			<p>This site is a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS <a href="http://www.hhs.gov/about/foa/opdivs/index.html">operating divisions</a>, <a href="http://www.hhs.gov/about/foa/osleadership/index.html">staff offices</a> and <a href="http://www.hhs.gov/about/programs/index.html">programs</a>.</p> 
+			<p>HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and this GitHub.io page.</p>
   		</div>
+  		
   		<div class='margin1 col6 pad4y nav'>
-  				<a href='#data' class='truncate contain clearfix pad2 keyline-bottom'>
-            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/data.png);"></span>
-            <span class='prose'>HHS-related GitHub Accounts</span>
-          </a>
-					<a href='#feedback' class='truncate contain clearfix pad2 keyline-bottom'>
-            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/contribute.png);"></span>
-            <span class='prose'>HHS-related GitHub Repositories</span>
-          </a>
-          <a href='#api' class='truncate contain clearfix pad2'>
-            <span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons/api.png);"></span>
-            <span class='prose'>HHS-related Developer Starter Tool Kit</span>
-          </a>
+  			<a href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span>
+        		</a>
+			<a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>HHS-related GitHub Repositories</span>
+            	</a>
+          	<a href='#toolkit' class='truncate contain clearfix pad2'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
   		</div>
-  	</div>
-    <!-- Bottom reader columns -->
+  	</section>
+    <!-- Middle section -->
+    <main class='limiter pad2y clearfix'>
+  		
+  		<!-- Accounts -->
+  		<div class='col12 pad4y'>
+  			<h2><a href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span></a>
+            </h2>
+			<table>
+			<tr>
+				<td>GitHub Account</td>
+			    {% for account in site.data.accounts %}
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="{{site.baseurl}}/images/icons_gly/{{account.icon}}.png" /></span></br>
+    				<a href="https://github.com/{{account.github }}">{{account.name}}</a>
+				</td>
+    			{% endfor %}
+    		</tr>
+    		<tr>
+    			<td>Agency Website</td>
+		    {% for account in site.data.accounts %}
+				<td style="text-align:center">
+				<a href="http://{{account.agency-website}}">{{account.agency}}</a>
+				</td>		    
+		    {% endfor %}
+		    </tr>
+    		</table>
+    	</div>
+    	
+    	<!-- Repos -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>#1 HHS-related GitHub Repositories</span></a>
+            </h2>
+			<table>
+			<tr>
+				<td>GitHub Repos</td>
+			{% for repo in site.data.repos %}
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="{{site.baseurl}}/images/icons_gly/{{repo.icon}}.png" /></span></br>
+    				<a href="https://github.com/{{account.github }}">{{ repo.name }} </a>
+				</td>
+    			{% endfor %}
+    		</tr>
+    		<tr>
+    			<td>Info</td>
+		    {% for repo in site.data.repos %}
+				<td>
+				{{repo.info}}
+				</td>		    
+		    {% endfor %}
+		    </tr>
+		    <tr>
+    			<td>Notes</td>
+		    {% for repo in site.data.repos %}
+				<td>
+				{{repo.notes}}
+				</td>		    
+		    {% endfor %}
+		    </tr>
+    		</table>
+    	</div>
+    	
+    	<!-- 2nd attempt at Repos -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>#2 HHS-related GitHub Repositories</span></a>
+            </h2>
+			<table>
+			<tr><th>GitHub Repo</th><th>Info</th></tr>
+			{% for repo in site.data.repos %}
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="{{site.baseurl}}/images/icons_gly/{{repo.icon}}.png" /></span></br>
+    				<a href="https://github.com/{{account.github }}">{{ repo.name }} </a>
+				</td>
+				<td>
+				{{repo.info}}
+				</td>		    
+		    </tr>
+		    {% endfor %}
+    		</table>
+    	</div>
+    	
+    	<!-- Toolkit -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#toolkit' class='truncate contain clearfix pad2'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
+            </h2>
+            <p>Under construction</p>
+    	</div>
+    	
+    </main>
+    
+    <!-- Posts section -->
     {% for post in site.categories.docs %}
     <div class='col12 pad4y fill-{{post.background-color}} keyline-top'>
       <div class='contain clip limiter row12 clearfix'>
-        <div class='col6'>
+        <div class='col12'>
           <h2><a class='data' href='#{{post.class}}' id='{{post.class}}'> {{post.title}} </a> </h2>
           {{post.content}}
         </div>
@@ -59,14 +146,41 @@
           <div class='col2 pad2x'>
             <h3><a href='{{post.link1}}'> {{post.link1title}} </a></h3>
             <p>{{post.link1info}}</p>
-          </div>
-          <div class='col2 pad2x'>
+
             <h3><a href='{{post.link2}}'> {{post.link2title}} </a></h3>
               <p>{{post.link2info}}</p>
 
             <h3><a href='{{post.link3}}'> {{post.link3title}} </a></h3>
               <p>{{post.link3info}}</p>
 
+            <h3><a href='{{post.link4}}'> {{post.link4title}} </a></h3>
+              <p>{{post.link4info}}</p>
+          </div>
+          <div class='col2 pad2x'>
+            <h3><a href='{{post.link5}}'> {{post.link5title}} </a></h3>
+              <p>{{post.link5info}}</p>
+
+            <h3><a href='{{post.link6}}'> {{post.link6title}} </a></h3>
+              <p>{{post.link6info}}</p>
+
+            <h3><a href='{{post.link7}}'> {{post.link7title}} </a></h3>
+              <p>{{post.link7info}}</p>
+
+            <h3><a href='{{post.link8}}'> {{post.link8title}} </a></h3>
+             <p>{{post.link8info}}</p>
+          </div>
+
+        {% elsif post.columns == 1 %}
+           <div class='col4 pad4x'>
+            <h3><a href='{{post.link1}}'> {{post.link1title}} </a></h3>
+              <p>{{post.link1info}}</p>
+
+            <h3><a href='{{post.link2}}'> {{post.link2title}} </a></h3>
+              <p>{{post.link2info}}</p>
+
+            <h3><a href='{{post.link3}}'> {{post.link3title}} </a></h3>
+              <p>{{post.link3info}}</p>
+              
             <h3><a href='{{post.link4}}'> {{post.link4title}} </a></h3>
               <p>{{post.link4info}}</p>
 
@@ -80,28 +194,17 @@
               <p>{{post.link7info}}</p>
 
              <h3><a href='{{post.link8}}'> {{post.link8title}} </a></h3>
-              <p>{{post.link8info}}</p>
-          </div>
-        {% elsif post.columns == 1 %}
-           <div class='col4 pad4x'>
-            <h3><a href='{{post.link1}}'> {{post.link1title}} </a></h3>
-              <p>{{post.link1info}}</p>
-
-            <h3><a href='{{post.link2}}'> {{post.link2title}} </a></h3>
-              <p>{{post.link2info}}</p>
-
-            <h3><a href='{{post.link3}}'> {{post.link3title}} </a></h3>
-              <p>{{post.link3info}}</p>
-        {% endif %}
+              <p>{{post.link8info}}</p>  
+    	{% endif %}
         </div>
   		</div>
   	</div>
-  	{% endfor %}
+  	{% endfor%}
+
     <!-- Footer -->
     <div class='content-footer'>
       <div class='limiter col12 clearfix'>
-          <span class='nih'></span>
-          <span class='hhs'></span>
+          <span class='hhs-sm'></span>
           <h6>hhs.github.io is a resource of the <a href=''>U.S. Department of Health and Human Services</a>.</h6>
       </div>
     </div>

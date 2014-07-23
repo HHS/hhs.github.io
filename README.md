@@ -1,8 +1,8 @@
-## Pillbox for Developers
+## hhs.github.io
 
-Homepage and public access point for learning and contributing to the code and documentation on the [Pillbox Data Process](https://github.com/HHS/pillbox-data-process). The site contains links and descriptions of how to understand, contribute, and access code and data from Pillbox.
+Landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account (github.com/hhs) that hosts repos, and this GitHub.io page. 
 
-This site and code is publicly available and will be maintained in connection with the Pillbox Data Process repository.
+This site and code is publicly available.
 
 ###Running the site
 
@@ -18,3 +18,7 @@ __Dependencies:__
 - Pygments: `sudo easy_install Pygments`
 
 More documentation on installing Jekyll and its dependencies at [Jekyll's installation's page](https://github.com/jekyll/jekyll/wiki/Install)
+
+## about HHS 
+
+The United States Department of Health and Human Services (HHS) protects health and provides essential human services. HHS has 11 operating divisions, including 8 agencies in the US Public Health Service and 3 human services agencies that administer a wide variety of health and human services and conduct life-saving research for the nation. HHS has 17 staff offices that oversee operations and provide guidance on policy issues and program implementation. Learn more here: http://www.hhs.gov/about/

@@ -1,209 +1,324 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<meta name='HHS on GitHub' content='index'/>
-<title>hhs.github.io</title>
-<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
+	<meta charset=utf-8 />
+	<meta name='hhs.github.io' content='index'/>
+	<title>HHS on Github</title>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400|Roboto:400,100' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
 </head>
 <body data-offset='80'>
 	<!-- Header -->
-	<div class="masthead col12 clearfix row2 keyline-bottom">
+	<header class="masthead col12 clearfix row2 keyline-bottom">
 		<div class="limiter clearfix">
-			<a href='/'>
-      <h1 class='col6 pad1y logo'>
-        <span class='logo nlm'></span>
-        <span class='logo text'>HHS on GitHub</span>
-      </h1>
-      </a>
+			<a href='/'><h1 class='col6 pad1y logo'><span class='logo hhs-lg'></span><span class='logo text'>HHS on GitHub</span></h1></a>
 			<div class="nav col8 nav-header" class="col2 text-right pad2y contain clearfix noprint ">
-        <a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
-        <a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
+        		<a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
+        		<a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
 			</div>
 		</div>
-  	</div>
-  	<!-- Middle window section -->
-  	<div class='limiter pad2y clearfix'>
+  	</header>
+  	<!-- Top section -->
+  	<section id='home' class='limiter pad2y clearfix'>
   		<div class='col5 pad4y'>
   			<h2>US Department of </br>Health and Human Services (<a href="www.hhs.gov">HHS</a>)</h2>
-			<p>This site is primarily a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and a GitHub.io page.</p>
-  			<p>HHS protects health and provides essential human services. HHS has 11 operating divisions, including 8 agencies in the US Public Health Service and 3 human services agencies that administer a wide variety of health and human services and conduct life-saving research for the nation. HHS has 17 staff offices that oversee operations and provide guidance on policy issues and program implementation.</p>
+			<p>This site is a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS <a href="http://www.hhs.gov/about/foa/opdivs/index.html">operating divisions</a>, <a href="http://www.hhs.gov/about/foa/osleadership/index.html">staff offices</a> and <a href="http://www.hhs.gov/about/programs/index.html">programs</a>.</p> 
+			<p>HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and this GitHub.io page.</p>
   		</div>
+  		
   		<div class='margin1 col6 pad4y nav'>
-  				<a href='#data' class='truncate contain clearfix pad2 keyline-bottom'>
-            <span class="icon" style="background-image: url(..//images/icons/data.png);"></span>
-            <span class='prose'>HHS-related GitHub Accounts</span>
-          </a>
-					<a href='#feedback' class='truncate contain clearfix pad2 keyline-bottom'>
-            <span class="icon" style="background-image: url(..//images/icons/contribute.png);"></span>
-            <span class='prose'>HHS-related GitHub Repositories</span>
-          </a>
-          <a href='#api' class='truncate contain clearfix pad2'>
-            <span class="icon" style="background-image: url(..//images/icons/api.png);"></span>
-            <span class='prose'>HHS-related Developer Starter Tool Kit</span>
-          </a>
+  			<a href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(..//images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span>
+        		</a>
+			<a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(..//images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>HHS-related GitHub Repositories</span>
+            	</a>
+          	<a href='#toolkit' class='truncate contain clearfix pad2'><span class="icon" style="background-image: url(..//images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
   		</div>
-  	</div>
-    <!-- Bottom reader columns -->
+  	</section>
+    <!-- Middle section -->
+    <main class='limiter pad2y clearfix'>
+  		
+  		<!-- Accounts -->
+  		<div class='col12 pad4y'>
+  			<h2><a href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(..//images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span></a>
+            </h2>
+			<table>
+			<tr>
+				<td>GitHub Account</td>
+			    
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/57-download.png" /></span></br>
+    				<a href="https://github.com/blue-button">Blue Button</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/77-ekg.png" /></span></br>
+    				<a href="https://github.com/CMSgov">Centers for Medicare & Medicaid Services</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/99-umbrella.png" /></span></br>
+    				<a href="https://github.com/hhs">Dept of Health & Human Services</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/94-pill.png" /></span></br>
+    				<a href="https://github.com/FDA">Food & Drug Administration</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/84-lightbulb.png" /></span></br>
+    				<a href="https://github.com/HHSIDEALab">HHS IDEA Lab</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/20-gear2.png" /></span></br>
+    				<a href="https://github.com/NCIP">National Cancer Informatics Program</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/91-beaker-2.png" /></span></br>
+    				<a href="https://github.com/ncbi">National Center for Biotechnology Information (NCBI)</a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/73-radar.png" /></span></br>
+    				<a href="https://github.com/informaticslab">Public Health Informatics Lab</a>
+				</td>
+    			
+    		</tr>
+    		<tr>
+    			<td>Agency Website</td>
+		    
+				<td style="text-align:center">
+				<a href="http://www.healthit.gov">ONC</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.cms.gov">CMS</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.hhs.gov">HHS</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.fda.gov">FDA</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.hhs.gov/idealab">IDEALab</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.nih.gov">NIH</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.nih.gov">NIH</a>
+				</td>		    
+		    
+				<td style="text-align:center">
+				<a href="http://www.cdc.gov">CDC</a>
+				</td>		    
+		    
+		    </tr>
+    		</table>
+    	</div>
+    	
+    	<!-- Repos -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(..//images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>#1 HHS-related GitHub Repositories</span></a>
+            </h2>
+			<table>
+			<tr>
+				<td>GitHub Repos</td>
+			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/104-index-cards.png" /></span></br>
+    				<a href="https://github.com/">CKANext data.json </a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/132-ghost.png" /></span></br>
+    				<a href="https://github.com/">Healthcare Fraud Prevention Partnership </a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/92-test-tube.png" /></span></br>
+    				<a href="https://github.com/">hhs.github.io </a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/123-id-card.png" /></span></br>
+    				<a href="https://github.com/">Medicaid Provider Enrollment Screener </a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/94-pill.png" /></span></br>
+    				<a href="https://github.com/">Pillbox for Developers </a>
+				</td>
+    			
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/66-microphone.png" /></span></br>
+    				<a href="https://github.com/">Voice of Consumer (VOC) </a>
+				</td>
+    			
+    		</tr>
+    		<tr>
+    			<td>Info</td>
+		    
+				<td>
+				Custom CKAN extension for the HHS 'dataset' catalog
+				</td>		    
+		    
+				<td>
+				Application that supports a data exchange network for preventing and detecting fraud, waste and abuse across health insurance payers.
+				</td>		    
+		    
+				<td>
+				Jekyll code that runs this website.
+				</td>		    
+		    
+				<td>
+				Efficient multi-state, multi-program provider screening application capable of risk scoring, credentialing validation, identify authentication, and sanction checks.
+				</td>		    
+		    
+				<td>
+				Code that cleans up, or processes, source data for prescription, over-the-counter, homeopathic and veterinary oral solid dosage medications (pills) marketed in the United States. Produces an easy-to-use, "pill-focused" dataset.
+				</td>		    
+		    
+				<td>
+				The Voice of Consumer (VOC) tool is a key component of the HHS website performance measurement framework.
+				</td>		    
+		    
+		    </tr>
+		    <tr>
+    			<td>Notes</td>
+		    
+				<td>
+				What is <a href="https://en.wikipedia.org/wiki/CKAN">CKAN</a>?
+				</td>		    
+		    
+				<td>
+				
+				</td>		    
+		    
+				<td>
+				
+				</td>		    
+		    
+				<td>
+				
+				</td>		    
+		    
+				<td>
+				
+				</td>		    
+		    
+				<td>
+				
+				</td>		    
+		    
+		    </tr>
+    		</table>
+    	</div>
+    	
+    	<!-- 2nd attempt at Repos -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(..//images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>#2 HHS-related GitHub Repositories</span></a>
+            </h2>
+			<table>
+			<tr><th>GitHub Repo</th><th>Info</th></tr>
+			
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/104-index-cards.png" /></span></br>
+    				<a href="https://github.com/">CKANext data.json </a>
+				</td>
+				<td>
+				Custom CKAN extension for the HHS 'dataset' catalog
+				</td>		    
+		    </tr>
+		    
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/132-ghost.png" /></span></br>
+    				<a href="https://github.com/">Healthcare Fraud Prevention Partnership </a>
+				</td>
+				<td>
+				Application that supports a data exchange network for preventing and detecting fraud, waste and abuse across health insurance payers.
+				</td>		    
+		    </tr>
+		    
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/92-test-tube.png" /></span></br>
+    				<a href="https://github.com/">hhs.github.io </a>
+				</td>
+				<td>
+				Jekyll code that runs this website.
+				</td>		    
+		    </tr>
+		    
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/123-id-card.png" /></span></br>
+    				<a href="https://github.com/">Medicaid Provider Enrollment Screener </a>
+				</td>
+				<td>
+				Efficient multi-state, multi-program provider screening application capable of risk scoring, credentialing validation, identify authentication, and sanction checks.
+				</td>		    
+		    </tr>
+		    
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/94-pill.png" /></span></br>
+    				<a href="https://github.com/">Pillbox for Developers </a>
+				</td>
+				<td>
+				Code that cleans up, or processes, source data for prescription, over-the-counter, homeopathic and veterinary oral solid dosage medications (pills) marketed in the United States. Produces an easy-to-use, "pill-focused" dataset.
+				</td>		    
+		    </tr>
+		    
+			<tr>
+		    	<td style="text-align:center">
+				  	<span class='logo'><img src="/images/icons_gly/66-microphone.png" /></span></br>
+    				<a href="https://github.com/">Voice of Consumer (VOC) </a>
+				</td>
+				<td>
+				The Voice of Consumer (VOC) tool is a key component of the HHS website performance measurement framework.
+				</td>		    
+		    </tr>
+		    
+    		</table>
+    	</div>
+    	
+    	<!-- Toolkit -->
+    	<div class='col12 pad4y'>
+  			<h2><a href='#toolkit' class='truncate contain clearfix pad2'><span class="icon" style="background-image: url(..//images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
+            </h2>
+            <p>Under construction</p>
+    	</div>
+    	
+    </main>
     
-    <div class='col12 pad4y fill-grey keyline-top'>
-      <div class='contain clip limiter row12 clearfix'>
-        <div class='col6'>
-          <h2><a class='data' href='#data' id='data'> HHS-related GitHub Accounts </a> </h2>
-          <p>This GitHub.io landing page is provided to raise awareness about GitHub activity across the Department and federal government such that developers do not need to be familiar with the government&rsquo;s <a href="http://www.hhs.gov/about/orgchart/">organizational structure</a> in order to find :mag: health and human services related developer tools.</p>
+    <!-- Posts section -->
+    
 
-<p>Included here are links to GitHub Accounts that are related to Department of Health &amp; Human Services (<a href="www.hhs.gov">HHS</a>) <a href="http://www.hhs.gov/about/foa/opdivs/index.html">operating divisions</a>, <a href="http://www.hhs.gov/about/foa/osleadership/index.html">staff offices</a>, and <a href="http://www.hhs.gov/about/programs/index.html">programs</a>.</p>
-
-<hr />
-
-        </div>
-        
-           <div class='col4 pad4x'>
-            <h3><a href='https://github.com/blue-button'> Blue Button </a></h3>
-              <p>Link to the Blue Button GitHub Account, supported by the Office of the National Coordinator ([ONC](http://www.healthit.gov)) for Health Information Technology (HIT)</p>
-
-            <h3><a href='https://github.com/CMSgov'> Center for Medicare & Medicaid Services (CMS) </a></h3>
-              <p>Link to the CMS GitHub Account</p>
-
-            <h3><a href='https://github.com/FDA'> Food & Drug Administration (FDA) </a></h3>
-              <p>Link to the FDA GitHub Account</p>
-        
-        </div>
-  		</div>
-  	</div>
-  	
-    <div class='col12 pad4y fill- keyline-top'>
-      <div class='contain clip limiter row12 clearfix'>
-        <div class='col6'>
-          <h2><a class='data' href='#feedback' id='feedback'> HHS-related GitHub Repositories </a> </h2>
-          <p><a href="https://github.com/HHS/pillbox-data-process">Pillbox for Developers</a> uses GitHub to enable anyone to join the process and help further development of the project. You can contribute to the project in by flagging errors or writing code to improve the process.</p>
-
-<p>This space will be used to track development and enable open access to the data processing code. Future development will include improved data format outputs and great flexibility in data access. Access at <a href="https://github.com/HHS/pillbox-data-process">github.com/HHS/pillbox-data-process</a>.</p>
-
-        </div>
-        
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.com/HHS/ckanext-datajson'> CKANext data.json </a></h3>
-            <p>Custom CKAN extension for hub.healthdata.gov</p>
-          </div>
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.com/HHS/CoECI-CMS-Healthcare-Fraud-Prevention'> Healthcare Fraud Prevention Partnership </a></h3>
-              <p>Software that supports a data exchange network for purposes of prevention and detection of fraud, waste and abuse across health insurance payers.</p>
-
-            <h3><a href='https://github.com/HHS/hhs.github.io'> hhs.github.io </a></h3>
-              <p>Jekyll code that runs this website.</p>
-
-            <h3><a href='https://github.com/HHS/pillbox-data-process'> Pillbox for Developers </a></h3>
-              <p>Code that cleans up, or processes, source data for prescription, over-the-counter, homeopathic and veterinary oral solid dosage medications (pills) marketed in the United States. Produces an easy-to-use, "pill-focused" dataset.</p>
-
-            <h3><a href='https://github.com/HHS/voc-admin/wiki'> Voice of Consumer (VOC) </a></h3>
-              <p>The Voice of Consumer (VOC) tool is a key component of the HHS website performance measurement framework.</p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-             <h3><a href=''>  </a></h3>
-              <p></p>
-          </div>
-        
-        </div>
-  		</div>
-  	</div>
-  	
-    <div class='col12 pad4y fill-grey keyline-top'>
-      <div class='contain clip limiter row12 clearfix'>
-        <div class='col6'>
-          <h2><a class='data' href='#toolkit' id='toolkit'> HHS-related Developer Starter Tool Kit </a> </h2>
-          <p>New to health and human services? Check out some developer resources to get you started.</p>
-
-<p>Intro to Human Services
-Intro to the Department of Health and Human Services</p>
-
-<hr />
-
-        </div>
-        
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.gov/hhs/hhs.github.io/intro-health-services'> Intro to Health Services </a></h3>
-            <p>An introduction to health services</p>
-          </div>
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.gov/hhs/hhs.github.io/entity-relationship-diagrams'> Entity Relationship Diagrams </a></h3>
-              <p>How to map the data</p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-             <h3><a href=''>  </a></h3>
-              <p></p>
-          </div>
-        
-        </div>
-  		</div>
-  	</div>
-  	
-    <div class='col12 pad4y fill-grey keyline-top'>
-      <div class='contain clip limiter row12 clearfix'>
-        <div class='col6'>
-          <h2><a class='data' href='#api' id='api'> Recommended Datasets for Hospitals </a> </h2>
-          <hr />
-
-        </div>
-        
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.gov/hhs/hhs.github.io/intro-health-services'> Intro to Health Services </a></h3>
-            <p>An introduction to health services</p>
-          </div>
-          <div class='col2 pad2x'>
-            <h3><a href='https://github.gov/hhs/hhs.github.io/entity-relationship-diagrams'> Entity Relationship Diagrams </a></h3>
-              <p>How to map the data</p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-            <h3><a href=''>  </a></h3>
-              <p></p>
-
-             <h3><a href=''>  </a></h3>
-              <p></p>
-          </div>
-        
-        </div>
-  		</div>
-  	</div>
-  	
     <!-- Footer -->
     <div class='content-footer'>
       <div class='limiter col12 clearfix'>
-          <span class='nih'></span>
-          <span class='hhs'></span>
+          <span class='hhs-sm'></span>
           <h6>hhs.github.io is a resource of the <a href=''>U.S. Department of Health and Human Services</a>.</h6>
       </div>
     </div>
