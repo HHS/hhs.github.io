@@ -1,8 +1,8 @@
 ## hhs.github.io
 
-Landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account (github.com/hhs) that hosts repos, and this GitHub.io page. 
+Landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account (github.com/hhs) that hosts repos, and this GitHub.io page. This site's code is publicly available.
 
-This site and code is publicly available.
+To add an HHS-related GitHub account, repo or page, edit the [_data/accounts](https://github.com/hhs/hhs.github.io/_data/accounts.yml) or [_data/repos](https://github.com/hhs/hhs.github.io/tree/master/_data/repos.yml) files, and submit a pull request. Or open a new [issue](https://github.com/HHS/hhs.github.io/issues?state=open).
 
 ###Running the site
 

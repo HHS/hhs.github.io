@@ -158,6 +158,10 @@ overflow: hidden;
 .inline {
   display: inline-block;
 }
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Tablet Layout
 ------------------------------------------------------- */
@@ -396,6 +400,7 @@ a {
   padding-top: 5px;
   padding-left: 5px;
   color: #404040;
+  font: 1.1em/1.6em 'Source Sans Pro', sans-serif;
 }
 .logo .blue {
   color: #fff;
@@ -565,12 +570,13 @@ table {
   *border-collapse: collapse;
   /* IE7, collapse table to remove spacing */
   font-size: 13px;
-  border: 1px solid #ddd;
+  border: 0px;
   }
 table th, table td {
   padding: 10px 10px 9px;
   line-height: 18px;
   text-align: left;
+  verticle-align: middle;
   }
 table th, table tr.labels td {
   padding-top: 9px;
@@ -585,14 +591,17 @@ table th {
   border-bottom: 1px solid #ddd;
   }
 table td {
-  vertical-align: center;
+  vertical-align: middle;
   }
+/*--------------------------------
+	no cell border
 table th + th, table td + td {
   border-left: 1px solid #ddd;
   }
 table tr + tr td {
   border-top: 1px solid #ddd;
   }
+---------------------------------*/
 
 /*-----------------------------------
   Layout
