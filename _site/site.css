@@ -525,7 +525,7 @@ a {
    HHS logo
 -----------------------------------*/
 .logo .hhs-lg {
-  background-image: url(..//images/logos/hhs-lg.png);
+  background-image: url(/images/logos/hhs-lg.png);
   background-repeat: no-repeat;
   display: inline-block;
   width: 50px;
@@ -535,7 +535,7 @@ a {
   margin-right: 5px;
 }
 .hhs-sm {
-  background-image: url(..//images/hhs-logo-25px.png);
+  background-image: url(/images/logos/hhs-logo-25px.png);
   background-repeat: no-repeat;
   display: inline-block;
   width: 25px;
@@ -814,6 +814,21 @@ table tr + tr td {
     text-decoration: none;
     line-height: inherit;
     font-weight: inherit;
+    }
+    .glyphish-attrib {
+      float:right;
+    }
+    .glyphish-attrib-logo {
+      background-image: url(/images/icons_gly/glyphish-badge-gray.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      text-indent: -999em;
+      float:right;
+      margin-top:5px;
+      margin-left:3px;
     }
    }
 .nav-wrapper {
