@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<script src='site.js'></script>
+
+{% if page.url == '/index.html' %}
+  <script>
+    $(function (){
+        $(window).scroll(function () {
+          if($(window).scrollTop() + $(window).height()  === $(document).height() -50) {
+            // $('ul.main-toc li.active').removeClass('active')
+            $('ul.main-toc li.last').addClass('active');
+          }
+        });
+
+        function mobileTop() {
+          if (isTouchDevice()) {
+            $('.nav-wrapper').css('top', 0);
+          }
+        }
+        // Scoll to anchor and set item to active
+        $('ul.main-toc a').click(function (e){
+            e.preventDefault();
+            var url = this.href.split('#'),
+              targetFirst = $('#' + url[1]).offset().top;
+              target = targetFirst;
+              console.log( $('#' + url[1]).offset().top)
+            $('html, body').animate({
+              scrollTop:  target
+            }, 0);
+            if (($(this).length) && !$(this).is('.active')) {
+              $('.navigation a').removeClass('active');
+              $(this).addClass('active');
+            }
+            if (isTouchDevice()) {
+              var topHeight = $(window).scrollTop();
+              $('.nav-wrapper').css('top', topHeight);
+            }
+        });
+    });
+  </script>
+{% endif %}
+

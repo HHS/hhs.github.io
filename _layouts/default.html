@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<meta name='hhs.github.io' content='index'/>
+	<title>HHS on Github</title>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+	<link href='https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700|Source+Sans+Pro:300,400|Roboto:400,100' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='site.css' type='text/css' media='screen' />
+</head>
+<body data-offset='80'>
+	<!-- Header -->
+	<header class="masthead col12 clearfix row2 keyline-bottom">
+		<div class="limiter clearfix">
+			<a href='{{site.baseurl}}/'><h1 class='col6 pad1y logo'><span class='logo hhs-lg'></span><span class='logo text'>HHS on GitHub</span></h1></a>
+			<div class="nav col8 nav-header" class="col2 text-right pad2y contain clearfix noprint ">
+        		<a class='pad2 keyline-right' href='https://github.com/HHS/hhs.github.io/README.md'>About</a>
+        		<a class='pad2'href='https://github.com/HHS/hhs.github.io/issues?state=open'>Issues</a>
+			</div>
+		</div>
+  	</header>
+  	<!-- Top section -->
+  	<section id='home' class='limiter pad2y clearfix'>
+  		<div class='col5 pad4y'>
+  			<h2>US Department of </br>Health and Human Services (<a href="www.hhs.gov">HHS</a>)</h2>
+			<p>This site is a landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS <a href="http://www.hhs.gov/about/foa/opdivs/index.html">operating divisions</a>, <a href="http://www.hhs.gov/about/foa/osleadership/index.html">staff offices</a> and <a href="http://www.hhs.gov/about/programs/index.html">programs</a>.</p> 
+			<p>HHS, as an umbrella organization, has its own GitHub organizational account that hosts repos, and this GitHub.io page.</p>
+  		</div>
+  		
+  		<div class='margin1 col6 pad4y nav'>
+  			<a href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span>
+        		</a>
+			<a href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/36-toolbox.png);"></span>
+            	<span class='prose'>HHS-related GitHub Repositories</span>
+            	</a>
+          	<a href='#toolkit' class='truncate contain clearfix pad2'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
+  		</div>
+  	</section>
+    <!-- Middle section -->
+    <main class='limiter pad2y clearfix'>
+  		<!-- Accounts -->
+  		<div class='col10 pad4y center'>
+  			<h2><a id='accounts' href='#accounts' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/190-bank.png);"></span>
+            	<span class='prose'>HHS-related GitHub Accounts</span></a>
+            </h2>
+			<table>
+			  {% for account in site.data.accounts %}
+		    	<tr>
+		    		<td style="text-align:center"><span class='logo'><img src="{{site.baseurl}}/images/icons_gly/{{account.icon}}.png" /></span>
+		    		</td>
+    				<td><a href="https://github.com/{{account.github }}">{{account.name}}</a>
+    				</td>
+					<td style="text-align:center"><a href="http://{{account.agency-website}}">{{account.agency}}</a>
+				</tr>
+ 			  {% endfor %}
+    		</table>
+    	</div>
+    	
+    	<!-- Repos -->
+    	<div class='col10 pad4y'>
+  			<h2><a id='repos' href='#repos' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/36-toolbox.png);"></span><span class='prose'>HHS-related GitHub Repositories</span></a>
+            </h2>
+			<table>
+			  {% for repo in site.data.repos %}
+				<tr>
+		    		<td style="text-align:center"><span class='logo'><img src="{{site.baseurl}}/images/icons_gly/{{repo.icon}}.png" /></span>
+		    		</td>
+	    			<td style="text-align:center"><a href="https://github.com/{{account.github}}">{{repo.name}}</a>
+	    			</td>
+					<td>{{repo.info}}
+					</td>		    
+			    </tr>
+		      {% endfor %}
+    		</table>
+    	</div>
+    	
+    	<!-- Toolkit -->
+    	<div class='col12 pad4y' style='clear:both'>
+  			<h2><a id='toolkit' href='#toolkit' class='truncate contain clearfix pad2 keyline-bottom'><span class="icon" style="background-image: url(../{{site.baseurl}}/images/icons_gly/181-hammer.png);"></span>
+            	<span class='prose'>HHS-related Developer Starter Tool Kit</span>
+          		</a>
+            </h2>
+            <p>		*** Under construction ***</p>
+    	</div>
+    	
+    </main>
+    
+    <!-- Posts section -->
+    {% for post in site.categories.docs %}
+    <div class='col12 pad4y fill-{{post.background-color}} keyline-top'>
+      <div class='contain clip limiter row12 clearfix'>
+        <div class='col12'>
+          <h2><a class='data' href='#{{post.class}}' id='{{post.class}}'> {{post.title}} </a> </h2>
+          {{post.content}}
+        </div>
+      </div>
+  	</div>
+  	{% endfor%}
+
+    <!-- Footer -->
+    <div class='content-footer'>
+      <div class='limiter col12 clearfix'>
+          <span class='hhs-sm'></span>
+          <h6>hhs.github.io is a resource of the <a href='http://hhs.gov'>U.S. Department of Health and Human Services</a>.
+      <a href="http://www.glyphish.com"><span class='glyphish-attrib-logo'></span></a>
+      <span class='glyphish-attrib'>Icons by </span>
+      </h6>
+      </div>
+    </div>
+
+</body>
+</html>
