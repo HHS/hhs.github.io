@@ -1,3 +1,9 @@
+> [!WARNING]
+> **This repository has been archived and is no longer maintained.**
+> The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
+> It should not be used in production systems.
+> For more information, please contact <hhs_github_service_desk@hhs.gov>.
+
 # hhs.github.io
 
 Landing page to direct visitors to HHS-related GitHub accounts, repositories and pages that are maintained under various names by HHS operating divisions, and staff offices. HHS, as an umbrella organization, has its own GitHub organizational account (github.com/hhs) that hosts repos, and this GitHub.io page. This site's code is publicly available.
